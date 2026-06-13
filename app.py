@@ -123,7 +123,7 @@ class Aplikacja:
 
         # etykiety po lewej stronie ramki
         tk.Label(ramka_param, text="Metoda:").grid(row=0, column=0, sticky=tk.W, padx=5, pady=2)
-        tk.Label(ramka_param, text="Max glebokos:").grid(row=1, column=0, sticky=tk.W, padx=5, pady=2)
+        tk.Label(ramka_param, text="Max glebokosc:").grid(row=1, column=0, sticky=tk.W, padx=5, pady=2)
         tk.Label(ramka_param, text="Min probek:").grid(row=2, column=0, sticky=tk.W, padx=5, pady=2)
         tk.Label(ramka_param, text="Trening %:").grid(row=3, column=0, sticky=tk.W, padx=5, pady=2)
 
@@ -434,6 +434,10 @@ class Aplikacja:
         self.reg_txt.delete("1.0", tk.END)
         self.lbl_dok.config(text="Dokladnosc: -")
         self.lbl_stat.config(text="Wezly: - | Liscie: - | Wysokosc: -")
+        self.metoda.set("Information Gain")
+        self.max_glab.set(10)
+        self.min_prob.set(1)
+        self.podzial.set(70)
 
     # zapisujemy raport
     def zapisz_wyniki(self):
@@ -458,7 +462,7 @@ class Aplikacja:
         # slownik z ustawieniami parametrow
         parametry = {
             "Metoda": self.metoda.get(),
-            "Max glebokos": self.max_glab.get(),
+            "Max glebokosc": self.max_glab.get(),
             "Min probek": self.min_prob.get(),
             "Podzial trening/test": str(self.podzial.get()) + "%",
             "Atrybut decyzji": self.decyzja,
