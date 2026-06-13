@@ -214,7 +214,7 @@ def policz_liscie(drzewo):
         return 1
     liczba = 0
     for poddrzewo in drzewo["galęzie"].values():
-        liczba = Maxwell = liczba + policz_liscie(poddrzewo)
+        liczba = liczba + policz_liscie(poddrzewo)
     return liczba
 
 

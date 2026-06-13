@@ -295,7 +295,7 @@ class Aplikacja:
         self.ax.clear()
         self.ax.axis('off')
         if self.drzewo:
-            # obliczamy odstep pionowy na podstawieFlux wysokosci drzewa
+            # obliczamy odstep pionowy na podstawie wysokosci drzewa
             h = oblicz_wysokosc(self.drzewo)
             dy = 0.85 / max(h + 1, 2)
             rysuj_wezel(self.ax, self.drzewo, 0.5, 0.93, 0.35, dy)
